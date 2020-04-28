@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../logo.svg";
 import '../App.css';
+import '../styles/loadingAnim.css'
 
 
 function Loader() {
@@ -8,7 +9,15 @@ function Loader() {
         <div className="App">
             <div className="App-header">
                 <img src={logo} className="App-logo" alt="logo"/>
-                <div>Ъ Ъ Ъ Ъ Ъ Ъ</div>
+                <div className="loading loading04">
+                    <span>Ъ</span>
+                    <span>Ъ</span>
+                    <span>Ъ</span>
+                    <span>Ъ</span>
+                    <span>Ъ</span>
+                    <span>Ъ</span>
+                    <span>Ъ</span>
+                </div>
             </div>
         </div>
     )
