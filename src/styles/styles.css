@@ -1,0 +1,21 @@
+.bg-teal {
+    background: #008080;
+}
+
+.dark-th {
+    background: #004b4e;
+    color: white;
+}
+
+.light-th {
+    background: #09d3ac;
+    color: #282c34;
+}
+
+.dark-th-color {
+    color: #007a7d;
+}
+
+.full-width {
+    width: 100%;
+}
