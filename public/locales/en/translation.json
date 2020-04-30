@@ -1,2 +1,12 @@
 {
+  "AppTitle": "ReHome",
+  "language": "language",
+  "home": "home",
+  "workspace": "workspace",
+  "logout": "logout",
+  "account": "account",
+  "sign in": "sign in",
+  "notFound": "not found",
+  "notFoundDescription": "Description",
+  "inDevelopment": "In Development"
 }
