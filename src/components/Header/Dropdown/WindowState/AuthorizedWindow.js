@@ -29,10 +29,12 @@ class LegacyAuthorizedWindow extends Component {
     }
 
     render() {
-        const {t, email} = this.props;
+        const {t, email, name} = this.props;
         return (
             <>
                 <NavDropdown title={t('account')} id="basic-nav-dropdown">
+                    <NavDropdown.Item>{name}</NavDropdown.Item>
+                    <NavDropdown.Divider/>
                     <NavDropdown.Item as={Link} to={"/account"}>{email}</NavDropdown.Item>
                     <NavDropdown.Item onClick={this.logoutReq}>{t('logout')}</NavDropdown.Item>
                 </NavDropdown>
@@ -44,7 +46,8 @@ class LegacyAuthorizedWindow extends Component {
 
 const mapStateToProps = function (store) {
     return {
-        email: store.userdataState.email
+        email: store.userdataState.email,
+        name: store.userdataState.name
     };
 };
 const mapDispatchToProps = function (dispatch) {

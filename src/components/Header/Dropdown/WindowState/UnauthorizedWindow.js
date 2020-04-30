@@ -15,7 +15,7 @@ class LegacyUnauthorizedWindow extends Component {
         const {t} = this.props;
         return (
             <NavDropdown title={t('account')} id="basic-nav-dropdown">
-                <NavDropdown.Item as={Link} to="/authorization/signin">{t('sign in')}</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/authorization/signin">{t('signIn')}</NavDropdown.Item>
                 <NavDropdown.Divider/>
             </NavDropdown>
 

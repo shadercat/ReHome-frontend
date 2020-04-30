@@ -1,35 +1,50 @@
 import React, {Component} from "react";
+import {connect} from "react-redux";
+import {BrowserRouter, Switch, Route} from "react-router-dom";
+import {setAuthorized, setUnauthorized, setUserdata} from "../actions";
+import {AppPaths} from "../constants/AppPaths";
+import {loadingTimeDelay} from "../constants/Constants";
+import authorizationService from "../services/authorizationService";
+import dataAccessService from "../services/dataAccessService";
+
+
 import Loader from "./Loader";
 import Header from "./Header/Header";
 import NotFound from "./NotFoundBody/NotFound";
 import RedirectWrapper from "./RedirectWrapper";
 import Footer from "./Footer/Footer";
 import DevelopmentBody from "./InDevelopmentBody/DevelopmentBody";
-import {BrowserRouter, Switch, Route} from "react-router-dom";
-import {setAuthorized, setUnauthorized, setUserdata} from "../actions";
-import {connect} from "react-redux";
-import {AppPaths} from "../constants/AppPaths";
-import authorizationService from "../services/authorizationService";
-import dataAccessService from "../services/dataAccessService";
+import Authorization from "./Authorization/Authorization";
 
 
 class Main extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isFetching: true
+            isFetching: true,
+            timeDelay: true,
+            timerHandler: null
         }
     }
 
     componentDidMount() {
+
+        let handler = setTimeout(() => {
+            this.setState({timeDelay: false});
+        }, loadingTimeDelay);
+
+        this.setState({timerHandler: handler});
+
         authorizationService.checkAuthorized()
             .then((result) => {
                 if (result) {
                     this.props.onAuthorized();
                     dataAccessService.getUserData()
                         .then((userData) => {
-                            this.props.setUserData(userData);
-                            this.setState({isFetching: false});
+                            if (userData) {
+                                this.props.setUserData(userData);
+                                this.setState({isFetching: false});
+                            }
                         })
                 } else {
                     this.props.unAuthorized();
@@ -39,10 +54,17 @@ class Main extends Component {
             .catch((error) => {
                 this.setState({isFetching: false})
             })
+
+    }
+
+    componentWillUnmount() {
+        if (this.state.timerHandler !== null) {
+            clearTimeout(this.state.timerHandler);
+        }
     }
 
     render() {
-        if (this.state.isFetching) {
+        if (this.state.isFetching || this.state.timeDelay) {
             return <Loader/>
         }
         return (
@@ -59,8 +81,8 @@ class Main extends Component {
                             <DevelopmentBody Description="workspace here"/>
                         </RedirectWrapper>
                         <RedirectWrapper path={AppPaths.authorization} accessible={!this.props.isAuthorized}
-                                         pathname={AppPaths.signIn}>
-                            <DevelopmentBody Description="authorization here"/>
+                                         pathname={AppPaths.workspace}>
+                            <Authorization/>
                         </RedirectWrapper>
                         <RedirectWrapper path={AppPaths.account} accessible={this.props.isAuthorized}
                                          pathname={AppPaths.signIn}>

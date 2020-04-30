@@ -5,4 +5,9 @@ const AppPaths = {
     signIn: "/authorization/signin"
 };
 
-export {AppPaths};
+const RawPath = {
+    signIn: "/signin",
+    signUp: "/signup"
+};
+
+export {AppPaths, RawPath};

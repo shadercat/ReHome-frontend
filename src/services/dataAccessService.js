@@ -6,11 +6,7 @@ const dataAccessService = {
         return new Promise((resolve, reject) => {
             getRequest(Paths.getUserData)
                 .then((result) => {
-                    if (result.success === true) {
-                        resolve(result.data);
-                    } else {
-                        reject(result.reason);
-                    }
+                    resolve(result);
                 })
                 .catch((error) => {
                     reject(error);

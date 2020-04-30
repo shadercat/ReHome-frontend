@@ -1,0 +1,11 @@
+.elementOuterContainer {
+    align-items: center;
+    min-height: 90vh;
+}
+
+.elementInnerContainer {
+    margin: auto;
+    width: 100%;
+    max-width: 300px;
+    padding-top: 15vh;
+}
