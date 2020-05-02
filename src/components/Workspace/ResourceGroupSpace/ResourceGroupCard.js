@@ -16,15 +16,14 @@ class LegacyResourceGroupCard extends Component {
 
                     <Card.Body style={{padding: "20px 5px"}}>
 
-                        <Card.Title>
-                            {t('description')}
-                        </Card.Title>
                         <Card.Text>
                             {item.description}
                         </Card.Text>
+
                         <Card.Link as={Link} to={`${match.url}/${item._id}#top`}>
                             {t('moreInfo')}
                         </Card.Link>
+
                     </Card.Body>
                     <Card.Footer>
                         <small className="text-muted">{`id: ${item._id} `}</small>

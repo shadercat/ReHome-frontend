@@ -10,6 +10,7 @@ import {RawPath} from "../../constants/AppPaths";
 import DeviceSpace from "./DeviceSpace/DeviceSpace";
 import ActionSpace from "./ActionSpace/ActionSpace";
 import ResourceGroupsSpace from "./ResourceGroupSpace/ResourseGroupSpace";
+import DeviceInfo from "./DeviceSpace/DeviceInfo/DeviceInfo";
 
 
 class LegacyWorkspace extends Component {
@@ -51,7 +52,7 @@ class LegacyWorkspace extends Component {
 
                 <Switch>
                     <Route path={`${match.path}${RawPath.devices}/:id`}>
-                        <DevelopmentBody Description="Device Info"/>
+                        <DeviceInfo/>
                     </Route>
                     <Route path={`${match.path}${RawPath.devices}`}>
                         <DeviceSpace/>

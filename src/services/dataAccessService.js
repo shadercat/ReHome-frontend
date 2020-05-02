@@ -1,4 +1,4 @@
-import {Paths} from "../constants/Links";
+import {Paths, ParameterizedPaths} from "../constants/Links";
 import {getRequest} from "./standardRequestFunc";
 
 const dataAccessService = {
@@ -41,6 +41,17 @@ const dataAccessService = {
                 .catch((error) => {
                     reject(error);
                 });
+        });
+    },
+    getDeviceInfo: function (deviceCode) {
+        return new Promise((resolve, reject) => {
+            getRequest(ParameterizedPaths.getDeviceInfo(deviceCode))
+                .then((data) => {
+                    resolve(data);
+                })
+                .catch((error) => {
+                    reject(error);
+                })
         });
     }
 };
