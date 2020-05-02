@@ -42,7 +42,7 @@ class LegacyHeader extends Component {
                             <NavDropdown.Item onClick={this.changeLanguage.bind(this, 'en')}>English</NavDropdown.Item>
                             <NavDropdown.Item
                                 onClick={this.changeLanguage.bind(this, 'ua')}>Український</NavDropdown.Item>
-                            <NavDropdown.Item onClick={this.changeLanguage.bind(this, 'ru')}>Русский</NavDropdown.Item>
+                            {/*<NavDropdown.Item onClick={this.changeLanguage.bind(this, 'ru')}>Русский</NavDropdown.Item>*/}
                         </NavDropdown>
                     </Nav>
 

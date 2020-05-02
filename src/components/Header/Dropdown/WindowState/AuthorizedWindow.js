@@ -33,7 +33,7 @@ class LegacyAuthorizedWindow extends Component {
         return (
             <>
                 <NavDropdown title={t('account')} id="basic-nav-dropdown">
-                    <NavDropdown.Item>{name}</NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to={"/account"}>{name}</NavDropdown.Item>
                     <NavDropdown.Divider/>
                     <NavDropdown.Item as={Link} to={"/account"}>{email}</NavDropdown.Item>
                     <NavDropdown.Item onClick={this.logoutReq}>{t('logout')}</NavDropdown.Item>

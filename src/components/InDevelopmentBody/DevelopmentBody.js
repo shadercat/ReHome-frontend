@@ -6,7 +6,7 @@ class DevelopmentBody extends Component {
     render() {
         const {t, Description} = this.props;
         return (
-            <div>
+            <div style={{height: "80vh"}}>
                 <div className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
                     <Jumbotron>
                         <h1>{t('inDevelopment')}</h1>

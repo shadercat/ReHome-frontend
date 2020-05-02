@@ -11,8 +11,38 @@ const dataAccessService = {
                 .catch((error) => {
                     reject(error);
                 })
-        })
+        });
+    },
+    getDevices: function (page) {
+        let parameters = {};
+        if (page) {
+            parameters.page = page;
+        }
+        return new Promise((resolve, reject) => {
+            getRequest(Paths.getUserDevices, parameters)
+                .then((data) => {
+                    resolve(data);
+                })
+                .catch((error) => {
+                    reject(error);
+                })
+        });
+    },
+    getResourceGroups: function (page) {
+        let parameters = {};
+        if (page) {
+            parameters.page = page
+        }
+        return new Promise((resolve, reject) => {
+            getRequest(Paths.getUserResGroups, parameters)
+                .then((data) => {
+                    resolve(data);
+                })
+                .catch((error) => {
+                    reject(error);
+                });
+        });
     }
 };
 
-export default dataAccessService
+export default dataAccessService;

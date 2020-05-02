@@ -1,4 +1,4 @@
-import {Paths, ParameterizedPaths} from "../constants/Links";
+import {Paths} from "../constants/Links";
 import {postRequest, getRequest} from "./standardRequestFunc";
 
 const authorizationMethods = {

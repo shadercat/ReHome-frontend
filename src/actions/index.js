@@ -44,3 +44,16 @@ export function unsetDeviceData() {
         type: types.UNSET_DEVICE_DATA
     }
 }
+
+export function setResourceGroups(data) {
+    return {
+        type: types.SET_RESOURCE_GROUPS,
+        data: data
+    }
+}
+
+export function unsetResourceGroups() {
+    return {
+        type: types.UNSET_RESOURCE_GROUPS
+    }
+}

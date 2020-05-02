@@ -15,6 +15,7 @@ import RedirectWrapper from "./RedirectWrapper";
 import Footer from "./Footer/Footer";
 import DevelopmentBody from "./InDevelopmentBody/DevelopmentBody";
 import Authorization from "./Authorization/Authorization";
+import Workspace from "./Workspace/Workspace";
 
 
 class Main extends Component {
@@ -78,7 +79,7 @@ class Main extends Component {
                         </Route>
                         <RedirectWrapper path={AppPaths.workspace} accessible={this.props.isAuthorized}
                                          pathname={AppPaths.signIn}>
-                            <DevelopmentBody Description="workspace here"/>
+                            <Workspace/>
                         </RedirectWrapper>
                         <RedirectWrapper path={AppPaths.authorization} accessible={!this.props.isAuthorized}
                                          pathname={AppPaths.workspace}>
