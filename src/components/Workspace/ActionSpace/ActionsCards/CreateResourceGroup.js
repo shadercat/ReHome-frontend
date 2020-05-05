@@ -90,8 +90,9 @@ class LegacyCreateResourceGroup extends Component {
                                         <Form.Control
                                             name='resName'
                                             type='text'
-                                            pattern='^.{4,30}'
+                                            pattern='^.{4,30}$'
                                             placeholder={t('resGroupName')}
+                                            required
                                         />
                                         <Form.Control.Feedback type='invalid'>
                                             {t('invalidFormat')}

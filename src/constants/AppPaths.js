@@ -3,7 +3,8 @@ const AppPaths = {
     account: '/account',
     authorization: "/authorization",
     signIn: "/authorization/signin",
-    resourceGroups: "/workspace/resgroups"
+    resourceGroups: "/workspace/resgroups",
+    devices: "/workspace/devices"
 };
 
 const RawPath = {

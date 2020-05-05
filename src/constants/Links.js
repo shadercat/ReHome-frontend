@@ -38,8 +38,8 @@ const ParameterizedPaths = {
     addDeviceToResGroup: function (resId) {
         return `${Origin}/resourcegroup/${resId}/devices/add`;
     },
-    deleteDeviceFromResGroup: function (resId) {
-        return `${Origin}/resourcegroup/${resId}/devices/delete`
+    deleteDeviceFromResGroup: function (resId, deviceCode) {
+        return `${Origin}/resourcegroup/${resId}/devices/${deviceCode}/delete`
     },
     getRecommendation: function (codeString, lang) {
         return `${Origin}/recommendation/${codeString}/${lang}`;

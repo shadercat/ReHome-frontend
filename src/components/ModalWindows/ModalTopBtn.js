@@ -12,11 +12,11 @@ class ModalTopBtn extends Component {
                     </Modal.Header>
                     <Modal.Body>{bodyText}</Modal.Body>
                     <Modal.Footer>
-                        <Button variant="secondary" onClick={handleClose}>
-                            {closeText}
-                        </Button>
                         <Button variant="info" onClick={handleBtn}>
                             {btnText}
+                        </Button>
+                        <Button variant="secondary" onClick={handleClose}>
+                            {closeText}
                         </Button>
                     </Modal.Footer>
                 </Modal>

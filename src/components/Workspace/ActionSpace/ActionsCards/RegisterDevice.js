@@ -92,6 +92,7 @@ class LegacyRegisterDevice extends Component {
                                             type='text'
                                             pattern='^\d{7,15}'
                                             placeholder={t('deviceCode')}
+                                            required
                                         />
                                         <Form.Control.Feedback type='invalid'>
                                             {t('invalidFormat')}
@@ -106,6 +107,7 @@ class LegacyRegisterDevice extends Component {
                                             type='text'
                                             pattern='^.{4,15}'
                                             placeholder={t('createName')}
+                                            required
                                         />
                                         <Form.Control.Feedback type='invalid'>
                                             {t('invalidFormat')}

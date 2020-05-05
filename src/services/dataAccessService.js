@@ -53,6 +53,32 @@ const dataAccessService = {
                     reject(error);
                 })
         });
+    },
+    getResourceGroupInfo: function (id) {
+        return new Promise((resolve, reject) => {
+            getRequest(ParameterizedPaths.getResGroup(id))
+                .then((data) => {
+                    resolve(data);
+                })
+                .catch((error) => {
+                    reject(error);
+                })
+        })
+    },
+    getResourceGroupDevices: function (id, page) {
+        let parameters = {};
+        if (page) {
+            parameters.page = page
+        }
+        return new Promise((resolve, reject) => {
+            getRequest(ParameterizedPaths.getDevicesFromResGroup(id), parameters)
+                .then((data) => {
+                    resolve(data);
+                })
+                .catch((error) => {
+                    reject(error);
+                })
+        })
     }
 };
 

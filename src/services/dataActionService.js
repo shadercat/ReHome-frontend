@@ -1,6 +1,7 @@
 import {Paths, ParameterizedPaths} from "../constants/Links";
 import {deleteRequest, postRequest} from "./standardRequestFunc";
 
+
 const dataActionService = {
     createDevice: function (data) {
         return new Promise((resolve, reject) => {
@@ -11,7 +12,7 @@ const dataActionService = {
                 .catch((error) => {
                     reject(error);
                 });
-        })
+        });
     },
     deleteDevice: function (deviceCode) {
         return new Promise((resolve, reject) => {
@@ -22,7 +23,7 @@ const dataActionService = {
                 .catch((error) => {
                     reject(error);
                 });
-        })
+        });
     },
     createGroup: function (data) {
         return new Promise((resolve, reject) => {
@@ -33,7 +34,18 @@ const dataActionService = {
                 .catch((error) => {
                     reject(error);
                 });
-        })
+        });
+    },
+    deleteDeviceFromGroup: function (groupId, deviceCode) {
+        return new Promise((resolve, reject) => {
+            deleteRequest(ParameterizedPaths.deleteDeviceFromResGroup(groupId, deviceCode))
+                .then(() => {
+                    resolve(true);
+                })
+                .catch((error) => {
+                    reject(error);
+                });
+        });
     }
 };
 

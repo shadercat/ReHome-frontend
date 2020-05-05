@@ -11,6 +11,7 @@ import DeviceSpace from "./DeviceSpace/DeviceSpace";
 import ActionSpace from "./ActionSpace/ActionSpace";
 import ResourceGroupsSpace from "./ResourceGroupSpace/ResourseGroupSpace";
 import DeviceInfo from "./DeviceSpace/DeviceInfo/DeviceInfo";
+import ResourceGroupInfo from "./ResourceGroupSpace/RecourceGroupInfo/ResourceGroupInfo";
 
 
 class LegacyWorkspace extends Component {
@@ -58,7 +59,7 @@ class LegacyWorkspace extends Component {
                         <DeviceSpace/>
                     </Route>
                     <Route path={`${match.path}${RawPath.resourceGroups}/:id`}>
-                        <DevelopmentBody Description="Resource group body"/>
+                        <ResourceGroupInfo/>
                     </Route>
                     <Route path={`${match.path}${RawPath.resourceGroups}`}>
                         <ResourceGroupsSpace/>
