@@ -4,8 +4,10 @@ import {withRouter} from "react-router"
 import {Button, Card, Col, ListGroup, ListGroupItem, Row} from "react-bootstrap";
 import {loadingTimeDelay} from "../../../../constants/Constants";
 import Loader from '../../../Loader';
-import {ModalTop} from "../../../ModalWindows";
+import {ModalTop, ModalTopBtn} from "../../../ModalWindows";
 import dataAccessService from "../../../../services/dataAccessService";
+import dataActionService from "../../../../services/dataActionService";
+import {AppPaths} from "../../../../constants/AppPaths";
 import DevicePart from "./Cards/DevicePart";
 import TriggerPart from "./Cards/TriggersPart";
 import DeviceTypePart from "./Cards/DeviceTypePart";
@@ -37,11 +39,15 @@ class LegacyDeviceInfo extends Component {
             modalInfo: {
                 title: "",
                 text: ""
-            }
+            },
+            showDeletingModal: false
         };
-        this.handleClose = this.handleClose.bind(this);
+        this.deleteThisDevice = this.deleteThisDevice.bind(this);
         this.downloadInfo = this.downloadInfo.bind(this);
+        this.showDeletionModal = this.showDeletionModal.bind(this);
+        this.handleModalClose = this.handleModalClose.bind(this);
         this.handleTrigger = this.handleTrigger.bind(this);
+        this.errorHandler = this.errorHandler.bind(this);
     }
 
     componentDidMount() {
@@ -69,25 +75,42 @@ class LegacyDeviceInfo extends Component {
                     isFetching: false
                 });
             })
-            .catch((error) => {
-                this.setState({
-                    isFetching: false,
-                    modalInfo: {
-                        header: this.props.t('failOperation'),
-                        text: this.props.t(error)
-                    },
-                    showModal: true
-                })
-            })
+            .catch(this.errorHandler);
     }
 
     handleTrigger(code) {
         alert(this.state.data.deviceName + " " + code);
     }
 
-    handleClose() {
+    handleModalClose() {
         this.setState({
-            showModal: false
+            showModal: false,
+            showDeletingModal: false
+        });
+    }
+
+    deleteThisDevice() {
+        dataActionService.deleteDevice(this.state.data.deviceCode)
+            .then(() => {
+                this.props.history.push(AppPaths.devices);
+            })
+            .catch(this.errorHandler)
+    }
+
+    showDeletionModal() {
+        this.setState({
+            showDeletingModal: true
+        });
+    }
+
+    errorHandler(error) {
+        this.setState({
+            isFetching: false,
+            modalInfo: {
+                header: this.props.t('failOperation'),
+                text: this.props.t(error)
+            },
+            showModal: true
         });
     }
 
@@ -100,10 +123,18 @@ class LegacyDeviceInfo extends Component {
             <>
                 <ModalTop
                     show={this.state.showModal}
-                    handleClose={this.handleClose}
+                    handleClose={this.handleModalClose}
                     headerText={this.state.modalInfo.header}
                     bodyText={this.state.modalInfo.text}
+                    closeText={t('close')}/>
+                <ModalTopBtn
+                    show={this.state.showDeletingModal}
+                    handleClose={this.handleModalClose}
+                    headerText={t('deleteDevice')}
+                    bodyText={t('deleteDeviceText')}
                     closeText={t('close')}
+                    btnText={t('delete')}
+                    handleBtn={this.deleteThisDevice}
                 />
                 <div className="py-4">
                     <div className="container overflow-hidden p-3 bg-light" style={{minHeight: "80vh"}}>
@@ -117,23 +148,27 @@ class LegacyDeviceInfo extends Component {
                                     <Card.Header as="h5">{t('actions')}</Card.Header>
                                     <ListGroup className="list-group-flush">
                                         <ListGroupItem className="text-center">
-
-                                            <Button
-                                                variant="primary">{t('addToResGroup')}
+                                            <Button variant="outline-primary" block>
+                                                {t('addToResGroup')}
                                             </Button>
-
+                                        </ListGroupItem>
+                                        <ListGroupItem className="text-center">
+                                            <Button variant="outline-danger" block
+                                                    onClick={this.showDeletionModal}>
+                                                {t('delete')}
+                                            </Button>
                                         </ListGroupItem>
                                     </ListGroup>
                                 </Card>
 
                                 <DeviceTypePart deviceType={this.state.data.deviceType}/>
+
                             </Col>
 
                             <Col sm="8">
                                 <TriggerPart
                                     triggers={this.state.data.deviceType.triggers}
-                                    handleTrigger={this.handleTrigger}
-                                />
+                                    handleTrigger={this.handleTrigger}/>
                             </Col>
 
                         </Row>

@@ -2,6 +2,7 @@ import axios from 'axios';
 import queryString from 'query-string';
 import _ from 'lodash'
 import {Config} from '../constants/Config';
+import {NETWORK_ERROR} from "../constants/FailReasons";
 
 const getRequest = function (url, options) {
     let opt = _.defaults(Config, options);
@@ -15,7 +16,11 @@ const getRequest = function (url, options) {
                 }
             })
             .catch((error) => {
-                reject(error.response.data.reason);
+                if (error.response) {
+                    reject(error.response.data.reason);
+                } else {
+                    reject(NETWORK_ERROR);
+                }
             })
     })
 };
@@ -32,8 +37,12 @@ const postRequest = function (url, args, options) {
                 }
             })
             .catch((error) => {
-                reject(error.response.data.reason);
-            });
+                if (error.response) {
+                    reject(error.response.data.reason);
+                } else {
+                    reject(NETWORK_ERROR);
+                }
+            })
     })
 };
 
@@ -49,8 +58,12 @@ const putRequest = function (url, args, options) {
                 }
             })
             .catch((error) => {
-                reject(error.response.data.reason);
-            });
+                if (error.response) {
+                    reject(error.response.data.reason);
+                } else {
+                    reject(NETWORK_ERROR);
+                }
+            })
     })
 };
 
@@ -67,7 +80,11 @@ const deleteRequest = function (url, options) {
                 }
             })
             .catch((error) => {
-                reject(error.response.data.reason);
+                if (error.response) {
+                    reject(error.response.data.reason);
+                } else {
+                    reject(NETWORK_ERROR);
+                }
             })
     })
 };

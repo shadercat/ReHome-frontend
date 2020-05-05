@@ -72,6 +72,7 @@
   "deleteFromGroup": "Delete from group",
   "deleteFromGroupText": "Are you sure to delete this from group?",
   "deviceDeletedFromGroup": "Device has been deleted from group.",
+  "deleteDeviceText": "Are you sure to delete this device?",
   "ROPTOPED5_ds": "There small device description",
   "ALREADY_LOGIN": "Already login.",
   "USER_DATA_WRONG": "User data wrong.",
@@ -79,5 +80,6 @@
   "ALREADY_REGISTERED": "Already registered.",
   "DATABASE_FAIL": "Something went wrong.",
   "UNAUTHORIZED": "Unauthorized.",
-  "NOT_FOUND": "Can`t find this."
+  "NOT_FOUND": "Can`t find this.",
+  "NETWORK_ERROR": "Network Error"
 }
