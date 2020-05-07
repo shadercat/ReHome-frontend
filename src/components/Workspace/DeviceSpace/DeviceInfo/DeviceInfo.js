@@ -11,6 +11,7 @@ import {AppPaths} from "../../../../constants/AppPaths";
 import DevicePart from "./Cards/DevicePart";
 import TriggerPart from "./Cards/TriggersPart";
 import DeviceTypePart from "./Cards/DeviceTypePart";
+import AddToGroupModal from "./AddToGroupModal";
 
 class LegacyDeviceInfo extends Component {
     constructor(props) {
@@ -40,14 +41,16 @@ class LegacyDeviceInfo extends Component {
                 title: "",
                 text: ""
             },
-            showDeletingModal: false
+            showDeletingModal: false,
+            showGroupModal: false
         };
         this.deleteThisDevice = this.deleteThisDevice.bind(this);
         this.downloadInfo = this.downloadInfo.bind(this);
         this.showDeletionModal = this.showDeletionModal.bind(this);
-        this.handleModalClose = this.handleModalClose.bind(this);
+        this.showInfoModal = this.showInfoModal.bind(this);
         this.handleTrigger = this.handleTrigger.bind(this);
         this.errorHandler = this.errorHandler.bind(this);
+        this.showAddToGroupModal = this.showAddToGroupModal.bind(this);
     }
 
     componentDidMount() {
@@ -78,17 +81,6 @@ class LegacyDeviceInfo extends Component {
             .catch(this.errorHandler);
     }
 
-    handleTrigger(code) {
-        alert(this.state.data.deviceName + " " + code);
-    }
-
-    handleModalClose() {
-        this.setState({
-            showModal: false,
-            showDeletingModal: false
-        });
-    }
-
     deleteThisDevice() {
         dataActionService.deleteDevice(this.state.data.deviceCode)
             .then(() => {
@@ -97,10 +89,26 @@ class LegacyDeviceInfo extends Component {
             .catch(this.errorHandler)
     }
 
-    showDeletionModal() {
+    handleTrigger(code) {
+        alert(this.state.data.deviceName + " " + code);
+    }
+
+    showInfoModal(state) {
         this.setState({
-            showDeletingModal: true
+            showModal: state
         });
+    }
+
+    showDeletionModal(state) {
+        this.setState({
+            showDeletingModal: state
+        });
+    }
+
+    showAddToGroupModal(state) {
+        this.setState({
+            showGroupModal: state
+        })
     }
 
     errorHandler(error) {
@@ -123,19 +131,24 @@ class LegacyDeviceInfo extends Component {
             <>
                 <ModalTop
                     show={this.state.showModal}
-                    handleClose={this.handleModalClose}
+                    handleClose={() => this.showInfoModal(false)}
                     headerText={this.state.modalInfo.header}
                     bodyText={this.state.modalInfo.text}
                     closeText={t('close')}/>
+
                 <ModalTopBtn
                     show={this.state.showDeletingModal}
-                    handleClose={this.handleModalClose}
+                    handleClose={() => this.showDeletionModal(false)}
                     headerText={t('deleteDevice')}
                     bodyText={t('deleteDeviceText')}
                     closeText={t('close')}
                     btnText={t('delete')}
-                    handleBtn={this.deleteThisDevice}
-                />
+                    handleBtn={this.deleteThisDevice}/>
+
+                <AddToGroupModal
+                    show={this.state.showGroupModal}
+                    onHide={() => this.showAddToGroupModal(false)}/>
+
                 <div className="py-4">
                     <div className="container overflow-hidden p-3 bg-light" style={{minHeight: "80vh"}}>
                         <Row className="mb-3">
@@ -148,13 +161,14 @@ class LegacyDeviceInfo extends Component {
                                     <Card.Header as="h5">{t('actions')}</Card.Header>
                                     <ListGroup className="list-group-flush">
                                         <ListGroupItem className="text-center">
-                                            <Button variant="outline-primary" block>
+                                            <Button variant="outline-primary" block
+                                                    onClick={() => this.showAddToGroupModal(true)}>
                                                 {t('addToResGroup')}
                                             </Button>
                                         </ListGroupItem>
                                         <ListGroupItem className="text-center">
                                             <Button variant="outline-danger" block
-                                                    onClick={this.showDeletionModal}>
+                                                    onClick={() => this.showDeletionModal(true)}>
                                                 {t('delete')}
                                             </Button>
                                         </ListGroupItem>

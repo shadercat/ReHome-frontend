@@ -6,7 +6,7 @@ class ModalTop extends Component {
         const {show, handleClose, headerText, bodyText, closeText} = this.props;
         return (
             <>
-                <Modal show={show} onHide={handleClose} animation={true}>
+                <Modal show={show} onHide={handleClose}>
                     <Modal.Header>
                         <Modal.Title>{headerText}</Modal.Title>
                     </Modal.Header>

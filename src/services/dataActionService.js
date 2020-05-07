@@ -11,7 +11,7 @@ const dataActionService = {
                 })
                 .catch((error) => {
                     reject(error);
-                });
+                })
         });
     },
     deleteDevice: function (deviceCode) {
@@ -22,7 +22,7 @@ const dataActionService = {
                 })
                 .catch((error) => {
                     reject(error);
-                });
+                })
         });
     },
     createGroup: function (data) {
@@ -33,7 +33,7 @@ const dataActionService = {
                 })
                 .catch((error) => {
                     reject(error);
-                });
+                })
         });
     },
     deleteDeviceFromGroup: function (groupId, deviceCode) {
@@ -44,8 +44,19 @@ const dataActionService = {
                 })
                 .catch((error) => {
                     reject(error);
-                });
+                })
         });
+    },
+    deleteResourceGroup: function (id) {
+        return new Promise((resolve, reject) => {
+            deleteRequest(ParameterizedPaths.deleteResourceGroup(id))
+                .then(() => {
+                    resolve(true);
+                })
+                .catch((error) => {
+                    reject(error);
+                })
+        })
     }
 };
 

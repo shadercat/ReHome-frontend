@@ -58,7 +58,7 @@ class LegacyResourceGroupsSpace extends Component {
                             <Card.Text>
                                 {t('yourResGroupsDescription')}
                             </Card.Text>
-                            <Button variant="primary" onClick={this.downloadMachines}>
+                            <Button variant="primary" onClick={this.downloadGroups}>
                                 {t('refresh')}
                             </Button>
                         </Card.Body>

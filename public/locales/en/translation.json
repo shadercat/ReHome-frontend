@@ -73,6 +73,8 @@
   "deleteFromGroupText": "Are you sure to delete this from group?",
   "deviceDeletedFromGroup": "Device has been deleted from group.",
   "deleteDeviceText": "Are you sure to delete this device?",
+  "deleteResGroup": "Delete Resource group",
+  "deleteResGroupText": "Are you sure to delete this resource group?",
   "ROPTOPED5_ds": "There small device description",
   "ALREADY_LOGIN": "Already login.",
   "USER_DATA_WRONG": "User data wrong.",

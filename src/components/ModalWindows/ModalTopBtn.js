@@ -6,7 +6,7 @@ class ModalTopBtn extends Component {
         const {show, handleClose, headerText, bodyText, btnText, handleBtn, closeText} = this.props;
         return (
             <>
-                <Modal show={show} onHide={handleClose} animation={false}>
+                <Modal show={show} onHide={handleClose}>
                     <Modal.Header>
                         <Modal.Title>{headerText}</Modal.Title>
                     </Modal.Header>
