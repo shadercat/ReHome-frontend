@@ -50,7 +50,7 @@ class LegacyMachineSpace extends Component {
                     handleClose={this.handleModalClose}
                     headerText={t('fail')}
                     bodyText={this.state.errorText}
-                    closedText={t('close')}
+                    closeText={t('close')}
                 />
                 <div className="container overflow-hidden p-3 text-center bg-light">
                     <Card className="text-center m-4">
