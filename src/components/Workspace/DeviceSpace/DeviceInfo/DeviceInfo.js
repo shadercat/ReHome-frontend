@@ -38,7 +38,7 @@ class LegacyDeviceInfo extends Component {
             timerHandler: null,
             showModal: false,
             modalInfo: {
-                title: "",
+                header: "",
                 text: ""
             },
             showDeletingModal: false,
@@ -51,6 +51,7 @@ class LegacyDeviceInfo extends Component {
         this.handleTrigger = this.handleTrigger.bind(this);
         this.errorHandler = this.errorHandler.bind(this);
         this.showAddToGroupModal = this.showAddToGroupModal.bind(this);
+        this.addDeviceToGroup = this.addDeviceToGroup.bind(this);
     }
 
     componentDidMount() {
@@ -79,6 +80,21 @@ class LegacyDeviceInfo extends Component {
                 });
             })
             .catch(this.errorHandler);
+    }
+
+    addDeviceToGroup(resId) {
+        dataActionService.addDeviceToResGroup(resId, this.state.data.deviceCode)
+            .then(() => {
+                this.setState({
+                    modalInfo: {
+                        header: this.props.t('successOperation'),
+                        text: this.props.t('addedToGroupText')
+                    },
+                    showModal: true,
+                    showGroupModal: false
+                })
+            })
+            .catch(this.errorHandler)
     }
 
     deleteThisDevice() {
@@ -146,6 +162,7 @@ class LegacyDeviceInfo extends Component {
                     handleBtn={this.deleteThisDevice}/>
 
                 <AddToGroupModal
+                    addToGroup={this.addDeviceToGroup}
                     show={this.state.showGroupModal}
                     onHide={() => this.showAddToGroupModal(false)}/>
 

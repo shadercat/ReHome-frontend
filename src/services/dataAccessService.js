@@ -16,7 +16,9 @@ const dataAccessService = {
     getDevices: function (page) {
         let parameters = {};
         if (page) {
-            parameters.page = page;
+            parameters.params = {
+                page: page
+            }
         }
         return new Promise((resolve, reject) => {
             getRequest(Paths.getUserDevices, parameters)
@@ -31,7 +33,9 @@ const dataAccessService = {
     getResourceGroups: function (page) {
         let parameters = {};
         if (page) {
-            parameters.page = page
+            parameters.params = {
+                page: page
+            }
         }
         return new Promise((resolve, reject) => {
             getRequest(Paths.getUserResGroups, parameters)
@@ -68,7 +72,9 @@ const dataAccessService = {
     getResourceGroupDevices: function (id, page) {
         let parameters = {};
         if (page) {
-            parameters.page = page
+            parameters.params = {
+                page: page
+            }
         }
         return new Promise((resolve, reject) => {
             getRequest(ParameterizedPaths.getDevicesFromResGroup(id), parameters)

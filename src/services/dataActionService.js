@@ -57,6 +57,20 @@ const dataActionService = {
                     reject(error);
                 })
         })
+    },
+    addDeviceToResGroup: function (resId, deviceCode) {
+        let params = {
+            deviceCode: deviceCode
+        };
+        return new Promise((resolve, reject) => {
+            postRequest(ParameterizedPaths.addDeviceToResGroup(resId), params)
+                .then(() => {
+                    resolve(true);
+                })
+                .catch((error) => {
+                    reject(error)
+                })
+        })
     }
 };
 

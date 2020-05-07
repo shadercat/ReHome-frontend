@@ -5,7 +5,7 @@ import {Config} from '../constants/Config';
 import {NETWORK_ERROR} from "../constants/FailReasons";
 
 const getRequest = function (url, options) {
-    let opt = _.defaults(Config, options);
+    let opt = _.defaults(options, Config);
     return new Promise((resolve, reject) => {
         axios.get(url, opt)
             .then((result) => {
@@ -26,7 +26,7 @@ const getRequest = function (url, options) {
 };
 
 const postRequest = function (url, args, options) {
-    let opt = _.defaults(Config, options);
+    let opt = _.defaults(options, Config);
     return new Promise((resolve, reject) => {
         axios.post(url, queryString.stringify(args), opt)
             .then((result) => {
@@ -47,7 +47,7 @@ const postRequest = function (url, args, options) {
 };
 
 const putRequest = function (url, args, options) {
-    let opt = _.defaults(Config, options);
+    let opt = _.defaults(options, Config);
     return new Promise((resolve, reject) => {
         axios.put(url, queryString.stringify(args), opt)
             .then((result) => {
@@ -69,7 +69,7 @@ const putRequest = function (url, args, options) {
 
 
 const deleteRequest = function (url, options) {
-    let opt = _.defaults(Config, options);
+    let opt = _.defaults(options, Config);
     return new Promise((resolve, reject) => {
         axios.delete(url, opt)
             .then((result) => {
