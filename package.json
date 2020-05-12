@@ -34,8 +34,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "dev": "react-scripts start",
+    "deploy": "serve -s build",
     "build": "react-scripts build",
-    "serve-build": "serve -s build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
