@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="53d28d84-c290-4197-8b66-74697b5fa4cd" name="Default Changelist" comment="" />
+    <list default="true" id="53d28d84-c290-4197-8b66-74697b5fa4cd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,7 +32,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ReHome_backend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../automato-frontend" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -53,6 +56,16 @@
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="npm start" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -63,6 +76,11 @@
       <envs />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.build" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -177,36 +195,36 @@
     </state>
     <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.834/1920.0.1600.870@0.0.1536.834" timestamp="1588890630307" />
     <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.834/1920.179.1600.870@0.0.1536.834" timestamp="1588720966877" />
-    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1588698977698">
+    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1589307042693">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834/1920.0.1600.870@0.0.1536.834" timestamp="1588698977698" />
+    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834/1920.0.1600.870@0.0.1536.834" timestamp="1589307042693" />
     <state x="629" y="311" key="Github.ShareDialog" timestamp="1588077140884">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="629" y="311" key="Github.ShareDialog/0.0.1536.834/1920.179.1600.870@0.0.1536.834" timestamp="1588077140884" />
-    <state width="1515" height="193" key="GridCell.Tab.0.bottom" timestamp="1588861640159">
+    <state width="1515" height="193" key="GridCell.Tab.0.bottom" timestamp="1589306872910">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1515" height="193" key="GridCell.Tab.0.bottom/0.0.1536.834/1920.0.1600.870@0.0.1536.834" timestamp="1588861640159" />
+    <state width="1515" height="193" key="GridCell.Tab.0.bottom/0.0.1536.834/1920.0.1600.870@0.0.1536.834" timestamp="1589306872910" />
     <state width="1515" height="193" key="GridCell.Tab.0.bottom/0.0.1536.834/1920.179.1600.870@0.0.1536.834" timestamp="1588718376785" />
     <state width="1515" height="193" key="GridCell.Tab.0.bottom/0.0.1536.834/1920.179.1600.900@0.0.1536.834" timestamp="1588113485732" />
-    <state width="1515" height="193" key="GridCell.Tab.0.center" timestamp="1588861640158">
+    <state width="1515" height="193" key="GridCell.Tab.0.center" timestamp="1589306872910">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1515" height="193" key="GridCell.Tab.0.center/0.0.1536.834/1920.0.1600.870@0.0.1536.834" timestamp="1588861640158" />
+    <state width="1515" height="193" key="GridCell.Tab.0.center/0.0.1536.834/1920.0.1600.870@0.0.1536.834" timestamp="1589306872910" />
     <state width="1515" height="193" key="GridCell.Tab.0.center/0.0.1536.834/1920.179.1600.870@0.0.1536.834" timestamp="1588718376785" />
     <state width="1515" height="193" key="GridCell.Tab.0.center/0.0.1536.834/1920.179.1600.900@0.0.1536.834" timestamp="1588113485732" />
-    <state width="1515" height="193" key="GridCell.Tab.0.left" timestamp="1588861640158">
+    <state width="1515" height="193" key="GridCell.Tab.0.left" timestamp="1589306872910">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1515" height="193" key="GridCell.Tab.0.left/0.0.1536.834/1920.0.1600.870@0.0.1536.834" timestamp="1588861640158" />
+    <state width="1515" height="193" key="GridCell.Tab.0.left/0.0.1536.834/1920.0.1600.870@0.0.1536.834" timestamp="1589306872910" />
     <state width="1515" height="193" key="GridCell.Tab.0.left/0.0.1536.834/1920.179.1600.870@0.0.1536.834" timestamp="1588718376784" />
     <state width="1515" height="193" key="GridCell.Tab.0.left/0.0.1536.834/1920.179.1600.900@0.0.1536.834" timestamp="1588113485731" />
-    <state width="1515" height="193" key="GridCell.Tab.0.right" timestamp="1588861640158">
+    <state width="1515" height="193" key="GridCell.Tab.0.right" timestamp="1589306872910">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1515" height="193" key="GridCell.Tab.0.right/0.0.1536.834/1920.0.1600.870@0.0.1536.834" timestamp="1588861640158" />
+    <state width="1515" height="193" key="GridCell.Tab.0.right/0.0.1536.834/1920.0.1600.870@0.0.1536.834" timestamp="1589306872910" />
     <state width="1515" height="193" key="GridCell.Tab.0.right/0.0.1536.834/1920.179.1600.870@0.0.1536.834" timestamp="1588718376785" />
     <state width="1515" height="193" key="GridCell.Tab.0.right/0.0.1536.834/1920.179.1600.900@0.0.1536.834" timestamp="1588113485732" />
     <state width="1515" height="243" key="GridCell.Tab.1.bottom" timestamp="1588623226389">
