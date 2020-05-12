@@ -1,4 +1,4 @@
-const Origin = "http://localhost:3000";
+const Origin = "https://rehome-backend.azurewebsites.net/";
 const Paths = {
     isAuthorized: `${Origin}/user/authorized`,
     login: `${Origin}/user/login`,
