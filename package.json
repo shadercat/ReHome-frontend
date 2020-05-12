@@ -33,7 +33,7 @@
     "socket.io-client": "^2.3.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "serve -s build",
     "dev": "react-scripts start",
     "deploy": "serve -s build",
     "build": "react-scripts build",
