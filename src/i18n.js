@@ -2,6 +2,7 @@ import i18n from 'i18next';
 import Backend from 'i18next-xhr-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import {initReactI18next} from 'react-i18next';
+import moment from 'moment';
 
 i18n
     // load translation using xhr -> see /public/locales
@@ -20,6 +21,10 @@ i18n
 
         interpolation: {
             escapeValue: false, // not needed for react as it escapes by default
+            format: function (value, format, lng) {
+                if (value instanceof Date) return moment(value).format(format);
+                return value;
+            }
         },
     });
 
