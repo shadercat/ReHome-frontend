@@ -1,10 +1,11 @@
-const Origin = "https://rehome-backend.azurewebsites.net";
+const Origin = "http://localhost:3000";
 const Paths = {
     isAuthorized: `${Origin}/user/authorized`,
     login: `${Origin}/user/login`,
     register: `${Origin}/user/create`,
     logout: `${Origin}/user/logout`,
     getUserData: `${Origin}/user/`,
+    editUserData: `${Origin}/user/edit`,
     getUserDevices: `${Origin}/user/devices`,
     getUserResGroups: `${Origin}/user/resourcegroups`,
     registerDevice: `${Origin}/device/register`,

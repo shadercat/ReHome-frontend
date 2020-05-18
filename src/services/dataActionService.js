@@ -71,6 +71,17 @@ const dataActionService = {
                     reject(error)
                 })
         })
+    },
+    editUserData: function (data) {
+        return new Promise((resolve, reject) => {
+            postRequest(Paths.editUserData, data)
+                .then(() => {
+                    resolve(true);
+                })
+                .catch((error) => {
+                    reject(error)
+                })
+        })
     }
 };
 
