@@ -16,6 +16,7 @@ import Footer from "./Footer/Footer";
 import DevelopmentBody from "./InDevelopmentBody/DevelopmentBody";
 import Authorization from "./Authorization/Authorization";
 import Workspace from "./Workspace/Workspace";
+import AccountInfo from "./Account/AccountInfo";
 
 
 class Main extends Component {
@@ -87,7 +88,7 @@ class Main extends Component {
                         </RedirectWrapper>
                         <RedirectWrapper path={AppPaths.account} accessible={this.props.isAuthorized}
                                          pathname={AppPaths.signIn}>
-                            <DevelopmentBody Description="Account info here"/>
+                            <AccountInfo/>
                         </RedirectWrapper>
                         <Route>
                             <NotFound/>

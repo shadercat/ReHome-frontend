@@ -15,6 +15,7 @@
     "immutable": "^4.0.0-rc.12",
     "jquery": "^3.5.0",
     "lodash": "^4.17.15",
+    "moment": "^2.25.3",
     "popper.js": "^1.16.1",
     "prop-types": "^15.7.2",
     "query-string": "^6.12.1",
@@ -35,7 +36,6 @@
   "scripts": {
     "start": "serve -s build",
     "dev": "react-scripts start",
-    "deploy": "serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
