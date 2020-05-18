@@ -118,7 +118,7 @@ class LegacyAccountInfo extends Component {
                 closeText={t('close')}
             />
             <div className="py4">
-                <div className="container overflow-hidden p-3 bg-light" style={{minHeight: "90vh"}}>
+                <div className="container overflow-hidden p-3 bg-light container-minimal-height">
                     <AccountCard
                         data={this.state.data}
                     />

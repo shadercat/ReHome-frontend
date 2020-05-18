@@ -6,7 +6,7 @@ class LegacyHello extends Component {
     render() {
         const {t} = this.props;
         return (
-            <div style={{height: "80vh"}}>
+            <div className="container-minimal-height">
                 <Jumbotron>
                     <h1>{t('hello')}</h1>
                     <p>

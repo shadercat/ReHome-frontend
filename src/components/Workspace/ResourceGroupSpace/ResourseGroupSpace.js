@@ -43,7 +43,7 @@ class LegacyResourceGroupsSpace extends Component {
     render() {
         const {t} = this.props;
         return (
-            <div className="py-4" style={{minHeight: "88vh"}}>
+            <div className="py-4 container-minimal-height">
                 <ModalTop
                     show={this.state.showModal}
                     handleClose={this.handleModalClose}

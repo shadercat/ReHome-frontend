@@ -167,7 +167,7 @@ class LegacyDeviceInfo extends Component {
                     onHide={() => this.showAddToGroupModal(false)}/>
 
                 <div className="py-4">
-                    <div className="container overflow-hidden p-3 bg-light" style={{minHeight: "80vh"}}>
+                    <div className="container overflow-hidden p-3 bg-light container-minimal-height">
                         <Row className="mb-3">
 
                             <Col sm="4">

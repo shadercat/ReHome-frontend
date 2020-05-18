@@ -10,7 +10,7 @@ class LegacyActionSpace extends Component {
     render() {
         const {t} = this.props;
         return (
-            <div className="py-4" style={{minHeight: "80vh"}}>
+            <div className="py-4 container-minimal-height">
                 <div className="container overflow-hidden p-3 bg-light">
 
                     <Card bg="secondary" text="white" className="mb-3">
