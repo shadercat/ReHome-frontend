@@ -8,7 +8,7 @@ class Footer extends Component {
         return (
             <Navbar className="bg-teal" variant="dark" sticky="bottom">
                 <Navbar.Text>
-                    Project ReHome 2020
+                    Project ReHome 2020 | shadercat@outlook.com
                 </Navbar.Text>
             </Navbar>
         )

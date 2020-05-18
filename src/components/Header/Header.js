@@ -18,7 +18,7 @@ class LegacyHeader extends Component {
         i18n: PropTypes.object.isRequired
     };
 
-    changeLanguage(lng, e) {
+    changeLanguage(lng) {
         const {i18n} = this.props;
         i18n.changeLanguage(lng);
     }
@@ -38,7 +38,7 @@ class LegacyHeader extends Component {
                     </Nav>
 
                     <Nav>
-                        <NavDropdown alignRight title={t('language')} id="lang-change">
+                        <NavDropdown alignRight title={t('currentLang')} id="lang-change">
                             <NavDropdown.Item onClick={this.changeLanguage.bind(this, 'en')}>English</NavDropdown.Item>
                             <NavDropdown.Item
                                 onClick={this.changeLanguage.bind(this, 'ua')}>Український</NavDropdown.Item>

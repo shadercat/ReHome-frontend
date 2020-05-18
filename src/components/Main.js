@@ -13,10 +13,10 @@ import Header from "./Header/Header";
 import NotFound from "./NotFoundBody/NotFound";
 import RedirectWrapper from "./RedirectWrapper";
 import Footer from "./Footer/Footer";
-import DevelopmentBody from "./InDevelopmentBody/DevelopmentBody";
 import Authorization from "./Authorization/Authorization";
 import Workspace from "./Workspace/Workspace";
 import AccountInfo from "./Account/AccountInfo";
+import MainPage from "./MainPage/MainPage";
 
 
 class Main extends Component {
@@ -76,7 +76,7 @@ class Main extends Component {
                     <div id="pageTop"/>
                     <Switch>
                         <Route exact path='/'>
-                            <DevelopmentBody Description="Main page here"/>
+                            <MainPage/>
                         </Route>
                         <RedirectWrapper path={AppPaths.workspace} accessible={this.props.isAuthorized}
                                          pathname={AppPaths.signIn}>

@@ -19,3 +19,7 @@
 .full-width {
     width: 100%;
 }
+
+.container-minimal-height {
+    min-height: 90vh;
+}

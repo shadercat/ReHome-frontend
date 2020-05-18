@@ -1,5 +1,6 @@
 {
   "AppTitle": "ReHome",
+  "currentLang": "en",
   "language": "Language",
   "home": "Home",
   "workspace": "Workspace",
@@ -80,6 +81,9 @@
   "registerDateKey": "Registration date: {{date, MM/DD/YYYY HH:MM}}",
   "changeInfo": "Change Info",
   "infoChanged": "Info has been changed.",
+  "appDescription": "Don`t know what to do with your pet while working on office or studying? Just use our app with smart toys for your toy!",
+  "learnMore": "Learn more",
+  "viewDetails": "View details »",
   "ROPTOPED5_ds": "There small device description",
   "ALREADY_LOGIN": "Already login.",
   "USER_DATA_WRONG": "User data wrong.",
