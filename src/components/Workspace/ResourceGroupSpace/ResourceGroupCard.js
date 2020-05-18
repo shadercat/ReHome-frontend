@@ -20,7 +20,7 @@ class LegacyResourceGroupCard extends Component {
                             {item.description}
                         </Card.Text>
 
-                        <Card.Link as={Link} to={`${match.url}/${item._id}#top`}>
+                        <Card.Link as={Link} to={`${match.url}/${item._id}#page-top`}>
                             {t('moreInfo')}
                         </Card.Link>
 

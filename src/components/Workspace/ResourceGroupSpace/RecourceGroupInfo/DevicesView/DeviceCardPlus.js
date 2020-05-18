@@ -12,7 +12,7 @@ class LegacyDeviceCardPlus extends Component {
     }
 
     redirectToDeviceInfo() {
-        this.props.history.push(`${AppPaths.devices}/${this.props.item.deviceCode}#top`);
+        this.props.history.push(`${AppPaths.devices}/${this.props.item.deviceCode}#page-top`);
     }
 
 

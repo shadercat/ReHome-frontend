@@ -73,7 +73,7 @@ class Main extends Component {
             <BrowserRouter>
                 <div>
                     <Header/>
-                    <div id="pageTop"/>
+                    <div id="page-top"/>
                     <Switch>
                         <Route exact path='/'>
                             <MainPage/>

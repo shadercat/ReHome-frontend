@@ -31,7 +31,7 @@ class LegacyDeviceCard extends Component {
                             {`device code: ${item.deviceCode} `}
                         </Card.Text>
 
-                        <Card.Link as={Link} to={`${match.url}/${item.deviceCode}#top`}>{t('moreInfo')}</Card.Link>
+                        <Card.Link as={Link} to={`${match.url}/${item.deviceCode}#page-top`}>{t('moreInfo')}</Card.Link>
                     </Card.Body>
 
                     <Card.Footer>

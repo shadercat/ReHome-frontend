@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53d28d84-c290-4197-8b66-74697b5fa4cd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/Account/AccountInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Account/AccountInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Workspace/ActionSpace/ActionSpace.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Workspace/ActionSpace/ActionSpace.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Workspace/DeviceSpace/DeviceInfo/DeviceInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Workspace/DeviceSpace/DeviceInfo/DeviceInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Workspace/DeviceSpace/DeviceSpace.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Workspace/DeviceSpace/DeviceSpace.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Workspace/HelloPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Workspace/HelloPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Workspace/ResourceGroupSpace/RecourceGroupInfo/ResourceGroupInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Workspace/ResourceGroupSpace/RecourceGroupInfo/ResourceGroupInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Workspace/ResourceGroupSpace/ResourseGroupSpace.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Workspace/ResourceGroupSpace/ResourseGroupSpace.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Workspace/DeviceSpace/DeviceCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Workspace/DeviceSpace/DeviceCard.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +122,7 @@
       <workItem from="1589550631668" duration="602000" />
       <workItem from="1589744864139" duration="627000" />
       <workItem from="1589809035637" duration="6854000" />
-      <workItem from="1589840619083" duration="3843000" />
+      <workItem from="1589840619083" duration="4207000" />
     </task>
     <task id="LOCAL-00001" summary="- set base for web app;">
       <created>1588102408633</created>
@@ -248,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589844236097</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="- set minimal height for pages by css class">
+      <created>1589844611221</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1589844611221</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,7 +273,8 @@
     <MESSAGE value="- add user data edit function;&#10;- add link for user data edit;" />
     <MESSAGE value="- add Account info page;" />
     <MESSAGE value="- add Main page;" />
-    <option name="LAST_COMMIT_MESSAGE" value="- add Main page;" />
+    <MESSAGE value="- set minimal height for pages by css class" />
+    <option name="LAST_COMMIT_MESSAGE" value="- set minimal height for pages by css class" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -283,11 +286,11 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="223" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834/1920.179.1600.870@0.0.1536.834" timestamp="1589841936809" />
-    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1589844235166">
+    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1589844974459">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.834/1920.0.1600.870@0.0.1536.834" timestamp="1589311147786" />
-    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.834/1920.179.1600.870@0.0.1536.834" timestamp="1589844235166" />
+    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.834/1920.179.1600.870@0.0.1536.834" timestamp="1589844974459" />
     <state x="503" y="165" key="EnvironmentVariablesDialog" timestamp="1589841917886">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -384,11 +387,15 @@
     </state>
     <state width="1515" height="243" key="GridCell.Tab.3.right/0.0.1536.834/1920.0.1600.870@0.0.1536.834" timestamp="1588623226390" />
     <state width="1515" height="243" key="GridCell.Tab.3.right/0.0.1536.834/1920.179.1600.870@0.0.1536.834" timestamp="1588278080517" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1589844244603">
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1589844615758">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.834/1920.0.1600.870@0.0.1536.834" timestamp="1589311140996" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.834/1920.179.1600.870@0.0.1536.834" timestamp="1589844244603" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.834/1920.179.1600.870@0.0.1536.834" timestamp="1589844615758" />
+    <state x="577" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589845011010">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="577" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834/1920.179.1600.870@0.0.1536.834" timestamp="1589845011010" />
     <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1588890764550">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
