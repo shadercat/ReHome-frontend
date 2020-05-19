@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="53d28d84-c290-4197-8b66-74697b5fa4cd" name="Default Changelist" comment="- set server origin;">
+    <list default="true" id="53d28d84-c290-4197-8b66-74697b5fa4cd" name="Default Changelist" comment="- change variable declaration from const to let (arguments for dataAccessService);">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/cursedcat.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/cursedcat.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Account/AccountInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Account/AccountInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Workspace/ActionSpace/ActionsCards/CreateResourceGroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Workspace/ActionSpace/ActionsCards/CreateResourceGroup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Workspace/ActionSpace/ActionsCards/DeleteDevice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Workspace/ActionSpace/ActionsCards/DeleteDevice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Workspace/ActionSpace/ActionsCards/RegisterDevice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Workspace/ActionSpace/ActionsCards/RegisterDevice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Authorization/SignIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Authorization/SignIn.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +135,7 @@
       <workItem from="1589744864139" duration="627000" />
       <workItem from="1589809035637" duration="6854000" />
       <workItem from="1589840619083" duration="4207000" />
-      <workItem from="1589897080498" duration="6244000" />
+      <workItem from="1589897080498" duration="6501000" />
     </task>
     <task id="LOCAL-00001" summary="- set base for web app;">
       <created>1588102408633</created>
@@ -274,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589845654185</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="- change variable declaration from const to let (arguments for dataAccessService);">
+      <created>1589911177431</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1589911177431</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,7 +302,8 @@
     <MESSAGE value="- add Main page;" />
     <MESSAGE value="- set minimal height for pages by css class" />
     <MESSAGE value="- set server origin;" />
-    <option name="LAST_COMMIT_MESSAGE" value="- set server origin;" />
+    <MESSAGE value="- change variable declaration from const to let (arguments for dataAccessService);" />
+    <option name="LAST_COMMIT_MESSAGE" value="- change variable declaration from const to let (arguments for dataAccessService);" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -311,10 +315,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="223" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834/1920.179.1600.870@0.0.1536.834" timestamp="1589841936809" />
-    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1589911157406">
+    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1589911356811">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.834/1920.0.1600.870@0.0.1536.834" timestamp="1589911157406" />
+    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.834/1920.0.1600.870@0.0.1536.834" timestamp="1589911356811" />
     <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.834/1920.179.1600.870@0.0.1536.834" timestamp="1589849074756" />
     <state x="503" y="165" key="EnvironmentVariablesDialog" timestamp="1589841917886">
       <screen x="0" y="0" width="1536" height="834" />

@@ -26,18 +26,18 @@ class LegacySignIn extends Component {
     };
 
     handleModalClose() {
-        this.setState(prevState => ({
+        this.setState({
             showModal: false
-        }))
+        })
     }
 
     handleSubmit(event) {
-        const form = event.currentTarget;
+        let form = event.currentTarget;
         event.preventDefault();
 
         if (form.checkValidity()) {
 
-            const args = {
+            let args = {
                 email: form.elements.email.value.trim(),
                 password: form.elements.password.value
             };
@@ -63,9 +63,9 @@ class LegacySignIn extends Component {
             event.stopPropagation();
         }
 
-        this.setState(prevState => ({
+        this.setState({
             validate: true
-        }));
+        });
     };
 
     render() {
