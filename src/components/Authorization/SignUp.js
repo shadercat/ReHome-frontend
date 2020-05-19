@@ -48,11 +48,11 @@ class LegacySignUp extends Component {
     }
 
     handleSubmit(event) {
-        const form = event.currentTarget;
+        let form = event.currentTarget;
         event.preventDefault();
 
         if (form.checkValidity()) {
-            const args = {
+            let args = {
                 email: form.elements.email.value.trim(),
                 password: form.elements.password.value,
                 name: form.elements.name.value,
