@@ -27,7 +27,17 @@ class LegacyHeader extends Component {
         const {t} = this.props;
         return (
             <Navbar expand="lg" sticky="top" variant="dark" className="bg-teal" collapseOnSelect={true}>
-                <Navbar.Brand as={Link} to="/">{t('AppTitle')}</Navbar.Brand>
+                <Navbar.Brand as={Link} to="/">
+                    <img
+                        src="/inv-cursed-cat.png"
+                        width="30"
+                        height="30"
+                        className="d-inline-block align-top"
+                        alt="ReHome logo"
+                    />
+                    {' '}
+                    {t('AppTitle')}
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbar-nav"/>
                 <Navbar.Collapse id="navbar-nav">
 
