@@ -20,7 +20,7 @@ class LegacyDeleteDevice extends Component {
     }
 
     sendDeleteRequest(event) {
-        const form = event.currentTarget;
+        let form = event.currentTarget;
         event.preventDefault();
 
         if (form.checkValidity()) {
