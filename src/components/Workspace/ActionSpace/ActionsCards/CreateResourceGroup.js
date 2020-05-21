@@ -20,11 +20,11 @@ class LegacyCreateResourceGroup extends Component {
     }
 
     sendCreateRequest(event) {
-        const form = event.currentTarget;
+        let form = event.currentTarget;
         event.preventDefault();
 
         if (form.checkValidity()) {
-            const args = {
+            let args = {
                 name: form.elements.resName.value.trim(),
                 description: form.elements.resDescription.value.trim()
             };

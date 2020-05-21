@@ -20,11 +20,11 @@ class LegacyRegisterDevice extends Component {
     }
 
     sendCreateRequest(event) {
-        const form = event.currentTarget;
+        let form = event.currentTarget;
         event.preventDefault();
 
         if (form.checkValidity()) {
-            const args = {
+            let args = {
                 deviceCode: form.elements.deviceCode.value.trim(),
                 deviceName: form.elements.deviceName.value.trim()
             };

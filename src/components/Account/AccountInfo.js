@@ -66,7 +66,7 @@ class LegacyAccountInfo extends Component {
 
     pushChanges(event) {
         event.preventDefault();
-        const form = event.currentTarget;
+        let form = event.currentTarget;
         if (form.checkValidity()) {
             let args = {
                 email: form.elements.email.value.trim(),
