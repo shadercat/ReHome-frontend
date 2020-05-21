@@ -23,7 +23,6 @@ class LegacyMachineSpace extends Component {
     }
 
     componentDidMount() {
-        console.log(this.props.location);
         let query = queryString.parse(this.props.location.search);
         let qsPage = parseInt(query.page);
         if (query.page && qsPage > 0) {

@@ -1,11 +1,13 @@
 import React, {Component} from "react";
-import {Button, Card} from "react-bootstrap";
+import {Button, Card, Modal, Pagination} from "react-bootstrap";
 import {withTranslation} from "react-i18next";
 import {setResourceGroups} from "../../../actions";
 import {connect} from "react-redux";
 import dataAccessService from "../../../services/dataAccessService";
 import ModalTop from "../../ModalWindows/ModalTop";
 import ResourceGroupsList from "./ResourceGroupsList";
+import queryString from "query-string";
+import {withRouter} from "react-router";
 
 class LegacyResourceGroupsSpace extends Component {
     constructor(props) {
@@ -17,16 +19,30 @@ class LegacyResourceGroupsSpace extends Component {
         };
         this.downloadGroups = this.downloadGroups.bind(this);
         this.handleModalClose = this.handleModalClose.bind(this);
+        this.fetchingPage = this.fetchingPage.bind(this);
     }
 
     componentDidMount() {
-        this.downloadGroups();
+        let query = queryString.parse(this.props.location.search);
+        let qsPage = parseInt(query.page);
+        if (query.page && qsPage > 0) {
+            this.setState({page: qsPage})
+        }
+        this.downloadGroups(this.state.page);
     }
 
-    downloadGroups() {
-        dataAccessService.getResourceGroups(this.state.page)
+    downloadGroups(page) {
+        dataAccessService.getResourceGroups(page)
             .then((data) => {
-                this.props.setGroups(data);
+                if (data.length > 0) {
+                    this.setState({
+                        page: page
+                    });
+                    this.props.history.push({
+                        search: `page=${page}`
+                    });
+                    this.props.setGroups(data);
+                }
             })
             .catch((error) => {
                 this.setState({
@@ -34,6 +50,12 @@ class LegacyResourceGroupsSpace extends Component {
                     errorText: this.props.t(error)
                 });
             });
+    }
+
+    fetchingPage(page) {
+        if (page > 0) {
+            this.downloadGroups(page);
+        }
     }
 
     handleModalClose() {
@@ -58,10 +80,19 @@ class LegacyResourceGroupsSpace extends Component {
                             <Card.Text>
                                 {t('yourResGroupsDescription')}
                             </Card.Text>
+                        </Card.Body>
+                        <Modal.Footer>
                             <Button variant="primary" onClick={this.downloadGroups}>
                                 {t('refresh')}
                             </Button>
-                        </Card.Body>
+                            <Pagination>
+                                <Pagination.Prev onClick={() => this.fetchingPage(this.state.page - 1)}/>
+                                <Pagination.Item active>
+                                    {this.state.page}
+                                </Pagination.Item>
+                                <Pagination.Next onClick={() => this.fetchingPage(this.state.page + 1)}/>
+                            </Pagination>
+                        </Modal.Footer>
                     </Card>
 
                     <ResourceGroupsList/>
@@ -83,4 +114,4 @@ const mapDispatchToProps = function (dispatch) {
     }
 };
 const ResourceGroupsSpace = withTranslation()(LegacyResourceGroupsSpace);
-export default connect(mapStateToProps, mapDispatchToProps)(ResourceGroupsSpace);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ResourceGroupsSpace));
