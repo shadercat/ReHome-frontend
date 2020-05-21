@@ -1,11 +1,13 @@
 import React, {Component} from "react";
-import {Button, Card} from "react-bootstrap";
+import {Button, Card, Pagination, Modal} from "react-bootstrap";
 import {withTranslation} from "react-i18next";
 import {setDeviceData} from "../../../actions";
 import {connect} from "react-redux";
+import {withRouter} from "react-router";
 import dataAccessService from "../../../services/dataAccessService";
 import ModalTop from "../../ModalWindows/ModalTop";
 import DevicesList from "./DevicesList";
+import queryString from 'query-string'
 
 class LegacyMachineSpace extends Component {
     constructor(props) {
@@ -17,17 +19,29 @@ class LegacyMachineSpace extends Component {
         };
         this.downloadMachines = this.downloadMachines.bind(this);
         this.handleModalClose = this.handleModalClose.bind(this);
+        this.fetchingPage = this.fetchingPage.bind(this);
     }
 
     componentDidMount() {
-        this.downloadMachines();
-
+        console.log(this.props.location);
+        let query = queryString.parse(this.props.location.search);
+        let qsPage = parseInt(query.page);
+        if (query.page && qsPage > 0) {
+            this.setState({page: qsPage})
+        }
+        this.downloadMachines(this.state.page);
     }
 
-    downloadMachines() {
-        dataAccessService.getDevices(this.state.page)
+    downloadMachines(page) {
+        dataAccessService.getDevices(page)
             .then((data) => {
-                this.props.setDevices(data);
+                if (data.length !== 0) {
+                    this.setState({page: page});
+                    this.props.history.push({
+                        search: `page=${page}`
+                    });
+                    this.props.setDevices(data);
+                }
             })
             .catch((error) => {
                 this.setState({
@@ -35,6 +49,12 @@ class LegacyMachineSpace extends Component {
                     errorText: this.props.t(error)
                 });
             });
+    }
+
+    fetchingPage(page) {
+        if (page > 0) {
+            this.downloadMachines(page);
+        }
     }
 
     handleModalClose() {
@@ -59,10 +79,19 @@ class LegacyMachineSpace extends Component {
                             <Card.Text>
                                 {t('yourDevicesDescription')}
                             </Card.Text>
+                        </Card.Body>
+                        <Modal.Footer>
                             <Button variant="primary" onClick={this.downloadMachines}>
                                 {t('refresh')}
                             </Button>
-                        </Card.Body>
+                            <Pagination>
+                                <Pagination.Prev onClick={() => this.fetchingPage(this.state.page - 1)}/>
+                                <Pagination.Item active>
+                                    {this.state.page}
+                                </Pagination.Item>
+                                <Pagination.Next onClick={() => this.fetchingPage(this.state.page + 1)}/>
+                            </Pagination>
+                        </Modal.Footer>
                     </Card>
                     <DevicesList/>
                 </div>
@@ -83,4 +112,4 @@ const mapDispatchToProps = function (dispatch) {
     }
 };
 const MachineSpace = withTranslation()(LegacyMachineSpace);
-export default connect(mapStateToProps, mapDispatchToProps)(MachineSpace);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(MachineSpace));
