@@ -56,6 +56,11 @@ class LegacyRecommendations extends Component {
         }
     }
 
+    componentWillUnmount() {
+        if (this.state.timerHandler !== null) {
+            clearTimeout(this.state.timerHandler);
+        }
+    }
 
     downloadData(page, lang) {
         dataAccessService.getRecommendations(page, lang)

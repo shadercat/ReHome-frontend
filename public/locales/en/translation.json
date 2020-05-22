@@ -92,7 +92,7 @@
   "DATABASE_FAIL": "Something went wrong.",
   "UNAUTHORIZED": "Unauthorized.",
   "NOT_FOUND": "Can`t find this.",
-  "NETWORK_ERROR": "Network Error",
+  "NETWORK_ERROR": "Network Error. Can`t connect to server.",
   "recommendations": "Recommendations",
   "recommendationsDescription": "There are recommendations for caring pets."
 }
