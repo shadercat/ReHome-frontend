@@ -17,6 +17,7 @@ import Authorization from "./Authorization/Authorization";
 import Workspace from "./Workspace/Workspace";
 import AccountInfo from "./Account/AccountInfo";
 import MainPage from "./MainPage/MainPage";
+import Recommendations from "./Recommendation/Recommendations";
 
 
 class Main extends Component {
@@ -90,6 +91,9 @@ class Main extends Component {
                                          pathname={AppPaths.signIn}>
                             <AccountInfo/>
                         </RedirectWrapper>
+                        <Route path={AppPaths.recommendations}>
+                            <Recommendations/>
+                        </Route>
                         <Route>
                             <NotFound/>
                         </Route>
