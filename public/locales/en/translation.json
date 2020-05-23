@@ -94,5 +94,6 @@
   "NOT_FOUND": "Can`t find this.",
   "NETWORK_ERROR": "Network Error. Can`t connect to server.",
   "recommendations": "Recommendations",
-  "recommendationsDescription": "There are recommendations for caring pets."
+  "recommendationsDescription": "There are recommendations for caring pets.",
+  "createdDataKey": "Created at: {{date, MM/DD/YYYY HH:MM}}"
 }

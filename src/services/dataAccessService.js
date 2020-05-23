@@ -103,6 +103,17 @@ const dataAccessService = {
                     reject(error);
                 })
         })
+    },
+    getRecommendationById: function (id) {
+        return new Promise((resolve, reject) => {
+            getRequest(ParameterizedPaths.getRecommendationById(id))
+                .then((data) => {
+                    resolve(data);
+                })
+                .catch((error) => {
+                    reject(error);
+                })
+        })
     }
 };
 

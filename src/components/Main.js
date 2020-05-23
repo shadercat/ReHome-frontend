@@ -20,6 +20,7 @@ import AccountInfo from "./Account/AccountInfo";
 import MainPage from "./MainPage/MainPage";
 import Recommendations from "./Recommendation/Recommendations";
 import ModalTop from "./ModalWindows/ModalTop";
+import RecommendationInfo from "./Recommendation/RecommendationInfo/RecommendationInfo";
 
 
 class Main extends Component {
@@ -123,6 +124,9 @@ class Main extends Component {
                                          pathname={AppPaths.signIn}>
                             <AccountInfo/>
                         </RedirectWrapper>
+                        <Route path={`${AppPaths.recommendations}/:id`}>
+                            <RecommendationInfo/>
+                        </Route>
                         <Route path={AppPaths.recommendations}>
                             <Recommendations/>
                         </Route>

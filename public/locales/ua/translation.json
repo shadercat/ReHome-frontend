@@ -94,5 +94,6 @@
   "NOT_FOUND": "Ми не можемо це знайти.",
   "NETWORK_ERROR": "Помилка підключення. Нема з'єднання з сервером",
   "recommendations": "Рекомендації",
-  "recommendationsDescription": "Рекомендаціїї з піклування за домашніми улюбленцями."
+  "recommendationsDescription": "Рекомендаціїї з піклування за домашніми улюбленцями.",
+  "createdDataKey": "Дата створення: {{date, MM/DD/YYYY HH:MM}}"
 }
