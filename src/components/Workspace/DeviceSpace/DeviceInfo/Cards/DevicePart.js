@@ -16,7 +16,7 @@ class LegacyDevicePart extends Component {
                     </Badge>
                     &nbsp;|&nbsp;
                     <Badge
-                        variant={(deviceData.deviceStatus.state === "warning") ? "danger" : "dark"}>
+                        variant={(deviceData.deviceStatus.state === "working") ? "success" : "dark"}>
                         {deviceData.deviceStatus.state}
                     </Badge>
                 </Card.Body>

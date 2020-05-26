@@ -11,7 +11,7 @@ class LegacyDeviceCard extends Component {
         return (
             <>
                 <Card border={(item.deviceStatus.status === "offline") ? "dark" :
-                    (item.deviceStatus.state === "normal") ? "success" : "dark"}>
+                    (item.deviceStatus.state === "working") ? "success" : "dark"}>
 
                     <Card.Header>{item.deviceName}</Card.Header>
 
@@ -22,7 +22,7 @@ class LegacyDeviceCard extends Component {
                                 {item.deviceStatus.status}
                             </Badge>
                             &nbsp;|&nbsp;
-                            <Badge variant={(item.deviceStatus.status === "online") ? "success" : "dark"}>
+                            <Badge variant={(item.deviceStatus.state === "working") ? "success" : "dark"}>
                                 {item.deviceStatus.state}
                             </Badge>
                         </Card.Title>
