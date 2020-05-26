@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="53d28d84-c290-4197-8b66-74697b5fa4cd" name="Default Changelist" comment="- add recommendation info page;">
+    <list default="true" id="53d28d84-c290-4197-8b66-74697b5fa4cd" name="Default Changelist" comment="-">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Workspace/DeviceSpace/DeviceCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Workspace/DeviceSpace/DeviceCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Workspace/DeviceSpace/DeviceInfo/Cards/DevicePart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Workspace/DeviceSpace/DeviceInfo/Cards/DevicePart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/constants/Links.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/Links.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -144,7 +142,7 @@
       <workItem from="1590225231378" duration="5290000" />
       <workItem from="1590246605587" duration="827000" />
       <workItem from="1590254236875" duration="2213000" />
-      <workItem from="1590261058528" duration="3013000" />
+      <workItem from="1590261058528" duration="3393000" />
     </task>
     <task id="LOCAL-00001" summary="- set base for web app;">
       <created>1588102408633</created>
@@ -349,7 +347,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590228781517</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="- design improvement;">
+      <created>1590499217751</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1590499217751</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -369,7 +374,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="- added static components;&#10;- added some component;" />
     <MESSAGE value="- added login, registration feature;" />
     <MESSAGE value="- added Workspaces;" />
     <MESSAGE value="- added DeviceInfo component;" />
@@ -394,7 +398,8 @@
     <MESSAGE value="- add recommendations page;" />
     <MESSAGE value="- add request error handler to Main component;&#10;- fix timer issue in Recommendation component;" />
     <MESSAGE value="- add recommendation info page;" />
-    <option name="LAST_COMMIT_MESSAGE" value="- add recommendation info page;" />
+    <MESSAGE value="- design improvement;" />
+    <option name="LAST_COMMIT_MESSAGE" value="- design improvement;" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -406,10 +411,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="223" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834/1920.179.1600.870@0.0.1536.834" timestamp="1589841936809" />
-    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1590429049694">
+    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1590499411982">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.834/1920.0.1600.870@0.0.1536.834" timestamp="1590429049694" />
+    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.834/1920.0.1600.870@0.0.1536.834" timestamp="1590499411982" />
     <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.834/1920.179.1600.870@0.0.1536.834" timestamp="1589849074756" />
     <state x="503" y="165" key="EnvironmentVariablesDialog" timestamp="1589841917886">
       <screen x="0" y="0" width="1536" height="834" />

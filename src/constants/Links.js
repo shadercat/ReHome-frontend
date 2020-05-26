@@ -1,4 +1,4 @@
-const Origin = "http://localhost:3000";
+const Origin = "http://192.168.31.194:3000";
 const Paths = {
     isAuthorized: `${Origin}/user/authorized`,
     login: `${Origin}/user/login`,

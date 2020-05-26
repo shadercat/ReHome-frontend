@@ -21,6 +21,7 @@ import MainPage from "./MainPage/MainPage";
 import Recommendations from "./Recommendation/Recommendations";
 import ModalTop from "./ModalWindows/ModalTop";
 import RecommendationInfo from "./Recommendation/RecommendationInfo/RecommendationInfo";
+import {UNAUTHORIZED} from "../constants/FailReasons";
 
 
 class Main extends Component {
@@ -79,13 +80,18 @@ class Main extends Component {
     }
 
     errorHandler(error) {
-        this.setState({
-            showModal: true,
-            modalInfo: {
-                header: this.props.t('failOperation'),
-                text: this.props.t(error)
-            }
-        });
+        if (error !== UNAUTHORIZED) {
+            this.setState({
+                showModal: true,
+                modalInfo: {
+                    header: this.props.t('failOperation'),
+                    text: this.props.t(error)
+                }
+            });
+        } else {
+            this.props.unAuthorized();
+            this.setState({isFetching: false});
+        }
     }
 
 
