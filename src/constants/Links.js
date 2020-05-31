@@ -1,4 +1,5 @@
 const Origin = "http://192.168.31.194:3000";
+const iotORIGIN = "http://192.168.31.194:3004";
 const Paths = {
     isAuthorized: `${Origin}/user/authorized`,
     login: `${Origin}/user/login`,
@@ -13,6 +14,9 @@ const Paths = {
     getDeviceTypesInfo: `${Origin}/devices`,
     getRecommendations: `${Origin}/recommendations`,
     getRecommendationsAdv: `${Origin}/recommendations/find`
+};
+const iotPath = {
+    ctrl: `${iotORIGIN}/ctrl`
 };
 const ParameterizedPaths = {
     getDeviceInfo: function (deviceCode) {
@@ -52,4 +56,4 @@ const ParameterizedPaths = {
         return `${Origin}/recommendation/${recId}`;
     }
 };
-export {Paths, ParameterizedPaths};
+export {Paths, ParameterizedPaths, iotPath};

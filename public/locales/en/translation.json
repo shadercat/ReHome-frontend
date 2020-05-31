@@ -95,5 +95,6 @@
   "NETWORK_ERROR": "Network Error. Can`t connect to server.",
   "recommendations": "Recommendations",
   "recommendationsDescription": "There are recommendations for caring pets.",
-  "createdDataKey": "Created at: {{date, MM/DD/YYYY HH:MM}}"
+  "createdDataKey": "Created at: {{date, MM/DD/YYYY HH:MM}}",
+  "sentAction": "Action has been sent."
 }

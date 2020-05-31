@@ -7,11 +7,13 @@ import Loader from '../../../Loader';
 import {ModalTop, ModalTopBtn} from "../../../ModalWindows";
 import dataAccessService from "../../../../services/dataAccessService";
 import dataActionService from "../../../../services/dataActionService";
+import ctrlActionService from "../../../../services/ctrlActionService";
 import {AppPaths} from "../../../../constants/AppPaths";
 import DevicePart from "./Cards/DevicePart";
 import TriggerPart from "./Cards/TriggersPart";
 import DeviceTypePart from "./Cards/DeviceTypePart";
 import AddToGroupModal from "./AddToGroupModal";
+import {connect} from "react-redux";
 
 class LegacyDeviceInfo extends Component {
     constructor(props) {
@@ -36,6 +38,7 @@ class LegacyDeviceInfo extends Component {
             isFetching: true,
             timeDelay: true,
             timerHandler: null,
+            reFetchTimerHandler: null,
             showModal: false,
             modalInfo: {
                 header: "",
@@ -68,6 +71,9 @@ class LegacyDeviceInfo extends Component {
     componentWillUnmount() {
         if (this.state.timerHandler !== null) {
             clearTimeout(this.state.timerHandler)
+        }
+        if (this.state.reFetchTimerHandler !== null) {
+            clearTimeout(this.state.reFetchTimerHandler)
         }
     }
 
@@ -106,7 +112,23 @@ class LegacyDeviceInfo extends Component {
     }
 
     handleTrigger(code) {
-        alert(this.state.data.deviceName + " " + code);
+        ctrlActionService.sendAction(this.state.data.deviceCode, this.props.userId, code)
+            .then(() => {
+                this.setState({
+                    modalInfo: {
+                        header: this.props.t('successOperation'),
+                        text: this.props.t('sentAction')
+                    },
+                    showModal: true
+                });
+                let handler = setTimeout(() => {
+                    this.downloadInfo();
+                }, 4000);
+                this.setState({
+                    reFetchTimerHandler: handler
+                });
+            })
+            .catch(this.errorHandler)
     }
 
     showInfoModal(state) {
@@ -210,5 +232,11 @@ class LegacyDeviceInfo extends Component {
     }
 }
 
+const mapStateToProps = function (store) {
+    return {
+        userId: store.userdataState._id
+    }
+};
+
 const DeviceInfo = withTranslation()(LegacyDeviceInfo);
-export default withRouter(DeviceInfo);
+export default connect(mapStateToProps)(withRouter(DeviceInfo));
