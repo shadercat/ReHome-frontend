@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53d28d84-c290-4197-8b66-74697b5fa4cd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/locales/en/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/en/translation.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/locales/ua/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/ua/translation.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/Links.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/Links.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -541,10 +539,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="277" y="59" key="SettingsEditor/0.0.1536.834/1920.0.1600.870@0.0.1536.834" timestamp="1590254431656" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1590940013028">
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1590940771139">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.834/1920.0.1600.870@0.0.1536.834" timestamp="1590940013028" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.834/1920.0.1600.870@0.0.1536.834" timestamp="1590940771139" />
     <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.834/1920.179.1600.870@0.0.1536.834" timestamp="1589848334281" />
     <state x="577" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589845011010">
       <screen x="0" y="0" width="1536" height="834" />

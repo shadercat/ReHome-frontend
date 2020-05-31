@@ -1,5 +1,5 @@
-const Origin = "http://192.168.31.194:3000";
-const iotORIGIN = "http://192.168.31.194:3004";
+const Origin = "https://rehome-backend.azurewebsites.net";
+const iotORIGIN = "https://rehome-socket.azurewebsites.net";
 const Paths = {
     isAuthorized: `${Origin}/user/authorized`,
     login: `${Origin}/user/login`,
