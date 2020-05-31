@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="53d28d84-c290-4197-8b66-74697b5fa4cd" name="Default Changelist" comment="- network error handler in main component;">
-      <change afterPath="$PROJECT_DIR$/src/services/ctrlActionService.js" afterDir="false" />
+    <list default="true" id="53d28d84-c290-4197-8b66-74697b5fa4cd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/locales/en/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/en/translation.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/locales/ua/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/ua/translation.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Workspace/DeviceSpace/DeviceInfo/DeviceInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Workspace/DeviceSpace/DeviceInfo/DeviceInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/Links.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/Links.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +145,7 @@
       <workItem from="1590261058528" duration="6454000" />
       <workItem from="1590789370352" duration="728000" />
       <workItem from="1590846299872" duration="1220000" />
-      <workItem from="1590934983244" duration="2446000" />
+      <workItem from="1590934983244" duration="2934000" />
     </task>
     <task id="LOCAL-00001" summary="- set base for web app;">
       <created>1588102408633</created>
@@ -367,7 +364,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590499459724</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="- add sending device action feature;">
+      <created>1590940008533</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1590940008533</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -387,7 +391,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="- added Workspaces;" />
     <MESSAGE value="- added DeviceInfo component;" />
     <MESSAGE value="- added ResourceGroupInfo feature;" />
     <MESSAGE value="- added deletion option in device info page;&#10;- fix error handlers in requests function;" />
@@ -412,7 +415,8 @@
     <MESSAGE value="- add recommendation info page;" />
     <MESSAGE value="- design improvement;" />
     <MESSAGE value="- network error handler in main component;" />
-    <option name="LAST_COMMIT_MESSAGE" value="- network error handler in main component;" />
+    <MESSAGE value="- add sending device action feature;" />
+    <option name="LAST_COMMIT_MESSAGE" value="- add sending device action feature;" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -424,10 +428,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="223" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834/1920.179.1600.870@0.0.1536.834" timestamp="1589841936809" />
-    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1590938091624">
+    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1590940007423">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.834/1920.0.1600.870@0.0.1536.834" timestamp="1590938091624" />
+    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.834/1920.0.1600.870@0.0.1536.834" timestamp="1590940007423" />
     <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.834/1920.179.1600.870@0.0.1536.834" timestamp="1590846307402" />
     <state x="503" y="165" key="EnvironmentVariablesDialog" timestamp="1589841917886">
       <screen x="0" y="0" width="1536" height="834" />
@@ -537,10 +541,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="277" y="59" key="SettingsEditor/0.0.1536.834/1920.0.1600.870@0.0.1536.834" timestamp="1590254431656" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1590152017642">
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1590940013028">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.834/1920.0.1600.870@0.0.1536.834" timestamp="1590152017642" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.834/1920.0.1600.870@0.0.1536.834" timestamp="1590940013028" />
     <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.834/1920.179.1600.870@0.0.1536.834" timestamp="1589848334281" />
     <state x="577" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589845011010">
       <screen x="0" y="0" width="1536" height="834" />
