@@ -1,10 +1,11 @@
 const AppPaths = {
     workspace: "/workspace",
-    account: '/account',
+    account: "/account",
     authorization: "/authorization",
     signIn: "/authorization/signin",
     resourceGroups: "/workspace/resgroups",
-    devices: "/workspace/devices"
+    devices: "/workspace/devices",
+    recommendations: "/recommendations"
 };
 
 const RawPath = {

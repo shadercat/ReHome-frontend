@@ -1,8 +1,18 @@
 import React, {Component} from 'react'
 import {withTranslation} from "react-i18next";
 import {Button, Jumbotron} from "react-bootstrap";
+import {withRouter} from "react-router";
+import {AppPaths} from "../../constants/AppPaths";
 
 class LegacyMainPage extends Component {
+    constructor(props) {
+        super(props);
+        this.redirect = this.redirect.bind(this);
+    }
+
+    redirect(path) {
+        this.props.history.push(path);
+    }
 
     render() {
         const {t} = this.props;
@@ -23,12 +33,18 @@ class LegacyMainPage extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-4">
-                            <h2>Heading</h2>
+                            <h2>{t('recommendations')}</h2>
                             <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus
                                 commodo,
                                 tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem
                                 malesuada magna mollis euismod. Donec sed odio dui. </p>
-                            <p><Button variant={"secondary"}>{t('viewDetails')}</Button></p>
+                            <p>
+                                <Button
+                                    variant={"info"}
+                                    onClick={() => this.redirect(AppPaths.recommendations)}>
+                                    {t('viewDetails')}
+                                </Button>
+                            </p>
                         </div>
                         <div className="col-md-4">
                             <h2>Heading</h2>
@@ -56,4 +72,4 @@ class LegacyMainPage extends Component {
 }
 
 const MainPage = withTranslation()(LegacyMainPage);
-export default MainPage
+export default withRouter(MainPage);

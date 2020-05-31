@@ -85,6 +85,35 @@ const dataAccessService = {
                     reject(error);
                 })
         })
+    },
+    getRecommendations: function (page, lang) {
+        let parameters = {};
+        if (page && lang) {
+            parameters.params = {
+                page: page,
+                lang: lang
+            }
+        }
+        return new Promise((resolve, reject) => {
+            getRequest(Paths.getRecommendations, parameters)
+                .then((data) => {
+                    resolve(data);
+                })
+                .catch((error) => {
+                    reject(error);
+                })
+        })
+    },
+    getRecommendationById: function (id) {
+        return new Promise((resolve, reject) => {
+            getRequest(ParameterizedPaths.getRecommendationById(id))
+                .then((data) => {
+                    resolve(data);
+                })
+                .catch((error) => {
+                    reject(error);
+                })
+        })
     }
 };
 

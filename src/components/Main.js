@@ -6,6 +6,7 @@ import {AppPaths} from "../constants/AppPaths";
 import {loadingTimeDelay} from "../constants/Constants";
 import authorizationService from "../services/authorizationService";
 import dataAccessService from "../services/dataAccessService";
+import {withTranslation} from "react-i18next";
 
 
 import Loader from "./Loader";
@@ -17,6 +18,10 @@ import Authorization from "./Authorization/Authorization";
 import Workspace from "./Workspace/Workspace";
 import AccountInfo from "./Account/AccountInfo";
 import MainPage from "./MainPage/MainPage";
+import Recommendations from "./Recommendation/Recommendations";
+import ModalTop from "./ModalWindows/ModalTop";
+import RecommendationInfo from "./Recommendation/RecommendationInfo/RecommendationInfo";
+import {UNAUTHORIZED} from "../constants/FailReasons";
 
 
 class Main extends Component {
@@ -25,8 +30,15 @@ class Main extends Component {
         this.state = {
             isFetching: true,
             timeDelay: true,
-            timerHandler: null
-        }
+            timerHandler: null,
+            showModal: false,
+            modalInfo: {
+                header: "",
+                text: ""
+            }
+        };
+        this.errorHandler = this.errorHandler.bind(this);
+        this.showModal = this.showModal.bind(this);
     }
 
     componentDidMount() {
@@ -53,9 +65,7 @@ class Main extends Component {
                     this.setState({isFetching: false});
                 }
             })
-            .catch((error) => {
-                this.setState({isFetching: false})
-            })
+            .catch(this.errorHandler)
 
     }
 
@@ -65,9 +75,39 @@ class Main extends Component {
         }
     }
 
+    showModal(show) {
+        this.setState({showModal: show});
+    }
+
+    errorHandler(error) {
+        if (error !== UNAUTHORIZED) {
+            this.setState({
+                showModal: true,
+                modalInfo: {
+                    header: this.props.t('failOperation'),
+                    text: this.props.t(error)
+                }
+            });
+        } else {
+            this.props.unAuthorized();
+            this.setState({isFetching: false});
+        }
+    }
+
+
     render() {
+        const {t} = this.props;
         if (this.state.isFetching || this.state.timeDelay) {
-            return <Loader/>
+            return (<>
+                <ModalTop
+                    show={this.state.showModal}
+                    handleClose={() => this.showModal(false)}
+                    headerText={this.state.modalInfo.header}
+                    bodyText={this.state.modalInfo.text}
+                    closeText={t('close')}
+                />
+                <Loader/>
+            </>)
         }
         return (
             <BrowserRouter>
@@ -90,6 +130,12 @@ class Main extends Component {
                                          pathname={AppPaths.signIn}>
                             <AccountInfo/>
                         </RedirectWrapper>
+                        <Route path={`${AppPaths.recommendations}/:id`}>
+                            <RecommendationInfo/>
+                        </Route>
+                        <Route path={AppPaths.recommendations}>
+                            <Recommendations/>
+                        </Route>
                         <Route>
                             <NotFound/>
                         </Route>
@@ -114,4 +160,4 @@ const mapDispatchToProps = function (dispatch) {
     }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Main);
+export default withTranslation()(connect(mapStateToProps, mapDispatchToProps)(Main));
